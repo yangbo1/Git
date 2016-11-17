@@ -1,2 +1,2 @@
-Git git fuck.
-Git git love.
+Git git fuck fuck.
+Git git love love.
