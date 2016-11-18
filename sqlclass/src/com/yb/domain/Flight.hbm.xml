@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yb.domain.Flight" table="flight">
+        <id name="fid" column="fid" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        <property name="number" column="number" type="java.lang.String"/>
+        <property name="start" column="start" type="java.lang.String"/>
+        <property name="end" column="end" type="java.lang.String"/>
+        <property name="date" column="date" type="java.lang.String"/>
+        <property name="starttime" column="starttime" type="java.lang.String"/>
+        <property name="endtime" column="endtime" type="java.lang.String"/>
+        <property name="seats" column="seats" type="java.lang.Integer"/>
+        <property name="price" column="price" type="java.lang.Double"/>
+        <property name="discountvote" column="discountvote" type="java.lang.Integer"/>
+        <property name="discountrate" column="discountrate" type="java.lang.Double"/>
+        <property name="company" column="company" type="java.lang.String"/>
+    </class>
+
+</hibernate-mapping>
