@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yb.domain.User" table="user">
+        <id name="userID" column="userID" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        <property name="username" column="username" type="java.lang.String"/>
+        <property name="address" column="address" type="java.lang.String"/>
+        <property name="zip" column="zip" type="java.lang.String"/>
+    </class>
+
+</hibernate-mapping>

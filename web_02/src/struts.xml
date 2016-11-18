@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- 设置struts2的开发模式，自动加载struts.xml和资源文件，控制台显示错误信息 -->
+    <constant name="struts.devMode" value="true"></constant>
+    <!-- UI主题，去掉struts2提供的样式 -->
+    <constant name="struts.ui.theme" value="simple"></constant>
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="UserAction_*" class="com.yb.web.action.UserAction" method="{1}">
+            <result name="add">/book.jsp</result>
+            <result name="find">/find.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="input">/book.jsp</result>
+        </action>
+        <action name="DisplayAction_*" class="com.yb.web.action.DisplayAction" method="{1}">
+            <result name="display">/display.jsp</result>
+        </action>
+    </package>
+    <!--登陆和用户管理-->
+   <!-- <package name="user" namespace="/user" extends="struts-default">
+        <action name="UserAction_*" class="com.itheima.web.action.UserAction" method="{1}">
+            <result name="menuHome" >/WEB-INF/page/login/home.jsp</result>
+            <result name="top" >/WEB-INF/page/login/top.jsp</result>
+            <result name="left" >/WEB-INF/page/login/left.jsp</result>
+            <result name="welcome" >/WEB-INF/page/login/welcome.jsp</result>
+            <result name="bottom" >/WEB-INF/page/login/bottom.jsp</result>
+            <result name="input" >/WEB-INF/page/login/login.jsp</result>
+
+            <result name="home" >/WEB-INF/page/user/list.jsp</result>
+            <result name="add" >/WEB-INF/page/user/add.jsp</result>
+            <result name="list" type="redirectAction">
+                <param name="actionName">UserAction_home.action</param>
+            </result>
+            <result name="edit">/WEB-INF/page/user/edit.jsp</result>
+            <result name="view">/WEB-INF/page/user/view.jsp</result>
+        </action>
+    </package>
+    &lt;!&ndash;公司管理&ndash;&gt;
+    <package name="company" namespace="/company" extends="struts-default">
+        <action name="CompanyAction_*" class="com.itheima.web.action.CompanyAction" method="{1}">
+            <result name="home">/WEB-INF/page/company/list.jsp</result>
+            <result name="add">/WEB-INF/page/company/add.jsp</result>
+            <result name="list" type="redirectAction">
+                <param name="actionName">CompanyAction_home.action</param>
+            </result>
+            <result name="edit">/WEB-INF/page/company/edit.jsp</result>
+        </action>
+    </package>-->
+</struts>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yb.domain.Order" table="order1">
+        <id name="orderID" column="orderID" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        <property name="username" column="username" type="java.lang.String"/>
+        <property name="bookname" column="bookname" type="java.lang.String"/>
+        <property name="publisher" column="publisher" type="java.lang.String"/>
+        <property name="quantity" column="quantity" type="java.lang.Integer"/>
+    </class>
+
+</hibernate-mapping>
